@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Inter:300,400,600,700,800,900|Poppins:300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Heebo:300,400,600,700,800,900|Poppins:300,400,500,600,700,800,900&display=swap");
+
+:root {
+  --primary: #fff;
+  --light: #f3f6f8;
+  --dark: #0e2e50;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.Inter {
+  font-family: "Inter", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Hebo {
+  font-family: "Heebo", sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.tranzition {
+  transition: all 0.5s ease;
+}
+.hoverAndActive {
+  transition: all 0.2s ease;
+}
+.hoverAndActive:hover {
+  border-bottom: solid 3px white;
+}
+.header {
+  width: 100%;
+  background-color: #00b98e;
+  background-image: url(./assets/img/shape-bottom.png);
+  background-size: contain;
+  background-repeat: no-repeat !important;
+  background-position: left bottom;
+}
+.hoverDiv {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+  border: 1px solid transparent;
+}
+.transitionAll {
+  transition: 0.5s all;
+}
+.hoverDiv:hover .hoverCart {
+  background-color: #00b98e;
+}
+.cartAnimate:hover .hoverColor {
+  transition: 0.5s all ease;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.cartAnimate:hover .bgCartAnimate {
+  transition: 0.5s all ease;
+  background-color: #00b98e;
+}
+.bgCartAnimate {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+  transition: 0.5s;
+  border-radius: 7px;
+}
+.borderR {
+  border: 1px solid rgba(256, 256, 256, 0.1);
+  border-radius: 40px;
+  transition: 0.3s;
+}
+.trans {
+  transition: 0.3s;
+}
+.trans:hover {
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024) {
+  .shadowCarouselCard {
+    width: 455px !important;
+  }
+}
+.caroucel_active > .shadowCarouselCard {
+  box-shadow: 0 0 45px white !important;
+  margin-top: 13px;
+  border: 1px solid #00b98e;
+  border-radius: 10px;
+  height: 250px;
+}
+.caroucel_active > .shadowCarouselCard > .iconn {
+  font-size: 55px;
+}
+.caroucel_active > .shadowCarouselCard > .Carouseltext {
+  font-size: 19px;
+}
+.caroucel_active
+  > .shadowCarouselCard
+  > .FlexDiv
+  > .NameClinet
+  > .Carouseltext {
+  font-size: 20px !important;
+}
+.caroucel_active > .shadowCarouselCard > .FlexDiv > .NameClinet > .carouselJob {
+  font-size: 18px !important;
+}
+.caroucel_active > .shadowCarouselCard > .FlexDiv {
+  margin-top: 20px !important;
+}
+.shadowCarouselCard {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+  border: 1px solid transparent;
+  transform: scale(0.85);
+  transition: 0.5s;
+}
+.swiper-button-prev{
+  transform: scale(0.7);
+  position: relative;
+  top: 88% !important;
+  left: 45% !important;
+  border-radius: 50% !important;
+  font-size: 11px !important;
+  padding: 30px  !important;
+  color: #00b98e !important;
+  border: 1px solid #00b98e;
+}
+.swiper-button-next{
+  transform: scale(0.7);
+  position: relative;
+  top: 88% !important;
+  right: 45% !important;
+  border-radius: 50% !important;
+  font-size: 11px !important;
+  padding: 30px  !important;
+  color: #00b98e !important;
+  border: 1px solid #00b98e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:1024px) {
+  .swiper-button-next{
+    right: 43% !important;
   }
-  to {
-    transform: rotate(360deg);
+  .swiper-button-prev{
+    left: 43% !important;
   }
+}
+@media screen and (max-width:768px) {
+  .swiper-button-next{
+    right: 40% !important;
+  }
+  .swiper-button-prev{
+    left: 40% !important;
+  }
+}
+@media screen and (max-width:426px) {
+  .swiper-button-next{
+    right: 36% !important;
+  }
+  .swiper-button-prev{
+    left: 36% !important;
+  }
+}
+.hoverAndActive:hover .Drop{
+  height: 24%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.Drop{
+  transition: 0.5s all;
+  height: 0;
+}
+.HoverAndActive:hover .Drop{
+height: 150px;
+padding-top: 8px;
+padding-bottom: 8px;
 }
